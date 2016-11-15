@@ -38,7 +38,8 @@ defaults:
         path: ""
         type: posts
     values:
-        banner: ""
+        date: ""
+        cover-image: ""
+        price: ""
+        miles: ""
         image: ""
-        categories: []
-        description: ""
