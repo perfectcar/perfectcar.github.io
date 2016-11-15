@@ -38,6 +38,7 @@ defaults:
         path: ""
         type: posts
     values:
-        thumbnail: ""
+        banner: ""
+        image: ""
         categories: []
         description: ""
