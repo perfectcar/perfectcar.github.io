@@ -32,3 +32,12 @@ sass:
   sass_dir: assets/styles/_base
 
 exclude: [node_modules, gulpfile.js]
+
+defaults:
+  - scope:
+        path: ""
+        type: posts
+    values:
+        thumbnail: ""
+        categories: []
+        description: ""
