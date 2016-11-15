@@ -2,22 +2,45 @@
 layout: default
 ---
 
-<div class="home">
+<div class="inventory-container">
 
-  <h1 class="page-heading">Posts</h1>
+  <section class="container inventory">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <h1 class="section-title">Featured Inventory</h1>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="featured-inventory-list row">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      {% for post in site.posts %}
+
+      <div class="col-xs-4">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="vehicle-card">
+            <img class="vehicle-image" src="assets/images/car-image-placeholder.png" alt="">
+            <div class="vehicle-text-wrapper">
+              <h2 class="vehicle-model">{{ post.title | escape }}</h2>
+              <p class="vehicle-miles">{{ post.miles }} Miles</p>
+              <p class="vehicle-price">${{ post.price }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </section>
 
 </div>
+
+<!-- <ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+      </h2>
+    </li>
+  {% endfor %}
+</ul> -->
