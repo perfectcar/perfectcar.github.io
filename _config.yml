@@ -41,4 +41,5 @@ defaults:
         cover-image: ""
         price: ""
         miles: ""
-        image: ""
+        engine: ""
+        transmission: ""
