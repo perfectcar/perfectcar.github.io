@@ -1,9 +1,16 @@
 <header class="main-header animated fadeIn">
   <div class="container">
-    <div class="logo-wrapper animated fadeInUp">
-
-      <img class="main-logo" src="assets/images/perfect-car-logo.png" alt="">
-      <h1 class="main-title">Perfect Car <span>Corp.</span></h1>
-    </div>
+    <a href="{{ site.baseurl }}/">
+      <div class="logo-wrapper animated fadeIn">
+        <img class="main-logo" src="{{site.baseurl}}/assets/images/perfect-car-logo.png" alt="">
+        <h1 class="main-title">Perfect Car <span>Corp.</span></h1>
+      </div>
+      <ul class="main-menu">
+        <li class="main-menu-link"><a href="#!"><span data-hover="Home">Home</span></a></li>
+        <li class="main-menu-link"><a href="#!"><span data-hover="Inventory">Inventory</span></a></li>
+        <li class="main-menu-link"><a href="#!"><span data-hover="Directions">Directions</span></a></li>
+        <li class="main-menu-link"><a href="#!"><span data-hover="Contact Us">Contact Us</span></a></li>
+      </ul>
+    </a>
   </div>
 </header>

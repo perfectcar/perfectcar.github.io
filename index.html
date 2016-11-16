@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="inventory-container">
+<div class="inventory-container showHere">
 
   <section class="container inventory">
 
@@ -15,7 +15,7 @@ layout: default
       <div class="col-xs-4">
         <a href="{{ post.url | prepend: site.baseurl }}">
           <div class="vehicle-card">
-            <img class="vehicle-image" src="assets/images/car-image-placeholder.png" alt="">
+            <img class="vehicle-image" src="{{site.baseurl}}/{{post.cover-image}}" alt="{{post.title}}">
             <div class="vehicle-text-wrapper">
               <h2 class="vehicle-model">{{ post.title | escape }}</h2>
               <p class="vehicle-miles">{{ post.miles }} Miles</p>

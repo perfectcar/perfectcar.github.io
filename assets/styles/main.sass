@@ -7,8 +7,17 @@ body
   color: white
   margin: 0
 
-a:focus, a:hover
+a, a:focus, a:hover
+  color: inherit
   text-decoration: none
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+li
+  display: inline-block
 
 // Fonts
 
@@ -18,6 +27,15 @@ a:focus, a:hover
   src: url('../fonts/MyriadWebPro-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/MyriadWebPro-Bold.woff') format("woff"), url('../fonts/MyriadWebPro-Bold.ttf') format("truetype")
   font-weight: bold
   font-style: normal
+
+@font-face
+  @font-face
+  font-family: 'League Gothic'
+  src: url('../fonts/LeagueGothic-Regular.eot')
+  src: url('../fonts/LeagueGothic-Regular.eot?#iefix') format("embedded-opentype"), url('../fonts/LeagueGothic-Regular.woff') format("woff"), url('../fonts/LeagueGothic-Regular.ttf') format("truetype")
+  font-weight: normal
+  font-style: normal
+
 
 @font-face
   font-family: 'League Gothic'
@@ -35,6 +53,17 @@ a:focus, a:hover
   background-position: center top
   background-size: cover
   position: relative
+  transition: all 300ms ease-in-out
+
+  &::before
+    content: ''
+    display: inline-block
+    width: 100%
+    height: 173px
+    background-image: linear-gradient(0deg, #000000 9%, rgba(35,30,30,0.00) 100%)
+    position: absolute
+    bottom: 0
+    left: 0
 
 .logo-wrapper
   padding-top: 155px
@@ -54,6 +83,41 @@ a:focus, a:hover
   span
     font-size: 25px
     margin-left: 10px
+
+.main-menu
+  font-family: 'League Gothic'
+  font-size: 20px
+  letter-spacing: 1.5px
+  position: relative
+  z-index: 1
+  text-transform: uppercase
+  text-align: center
+  margin-top: 85px
+
+.main-menu-link
+  display: inline-block
+  overflow: hidden
+  text-transform: uppercase
+
+.main-menu-link a span
+  position: relative
+  display: inline-block
+  transition: transform 0.3s
+
+.main-menu-link a span::before
+  color: #FFB91B
+  position: absolute
+  top: 100%
+  content: attr(data-hover)
+  font-weight: 700
+  transform: translate3d(0,0,0)
+
+.main-menu-link a:hover span,
+.main-menu-link a:focus span
+  transform: translateY(-100%)
+
+.main-menu-link + .main-menu-link
+  margin-left: 30px
 
 // Sections
 
@@ -78,12 +142,14 @@ a:focus, a:hover
   max-height: 350px
   position: relative
   margin-bottom: 40px
-  transition: transform 200ms ease-in-out
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15)
+  transition: transform .5s
+  transition-timing-function: cubic-bezier(.4,0,.5,1)
 
   &:hover
-    transform: translateY(-10px)
     color: #0C1E79
     text-decoration: none
+    transform: scale(1.03)
 
 .vehicle-image
   width: 100%
@@ -111,3 +177,31 @@ a:focus, a:hover
   margin: 0
   bottom: 10px
   right: 10px
+
+.car-title
+  display: inline-block
+  font-family: 'League Gothic'
+  font-style: italic
+  font-size: 37px
+  font-weight: lighter
+  border-bottom: 4px solid white
+  padding-bottom: 9px
+  letter-spacing: 1px
+  margin-bottom: 40px
+
+.information-section
+  margin-bottom: 40px
+
+.information-box
+  background-color: #FFB91B
+  color: black
+  text-align: center
+  padding: 15px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.information-data
+  margin: 0
+  font-size: 20px

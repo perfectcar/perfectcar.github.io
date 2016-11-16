@@ -3,9 +3,41 @@ layout: default
 ---
 <div class="container">
 
-<article class="post">
+  <h2 class="car-title">{{ page.title }}</h2>
 
-  <h2 class="note-title">{{ page.title }}</h2>
+  <section class="information-section row">
+
+    <div class="col-xs-3">
+      <div class="information-box">
+        <h2>Price</h2>
+        <p class="information-data">${{ page.price }}</p>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="information-box">
+        <h2>Mileage</h2>
+        <p class="information-data">{{ page.miles }}</p>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="information-box">
+        <h2>Engine</h2>
+        <p class="information-data">${{ page.price }}</p>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="information-box">
+        <h2>Transmission</h2>
+        <p class="information-data">${{ page.price }}</p>
+      </div>
+    </div>
+
+  </section>
+
+<article class="post">
 
   <div class="entry">
     {{ content }}
