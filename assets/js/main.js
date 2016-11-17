@@ -20,4 +20,19 @@ $(function(){
     }
   });
 
+// Shrinking Header
+
+$(window).scroll(function() {
+  var scroll = getCurrentScroll();
+    if ( scroll >= 150 && $(window).width() > 992 && $('body').hasClass('interior-page') ) {
+      $('.main-header').addClass('is-scrolling');
+    } else {
+      $('.main-header').removeClass('is-scrolling');
+    }
+});
+
+function getCurrentScroll() {
+  return window.pageYOffset || document.documentElement.scrollTop;
+  }
+
  });

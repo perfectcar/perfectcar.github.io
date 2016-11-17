@@ -57,14 +57,13 @@ li
   background-position: center top
   background-size: cover
   position: relative
-  transition: all 300ms ease-in-out
   display: flex
   align-items: center
 
 .header-arrow-down
   display: block
-  width: 70px
-  height: 70px
+  width: 65px
+  height: 65px
   // background-image: linear-gradient(0deg, #000000 9%, rgba(35,30,30,0.00) 100%)
   background-image: url('../images/arrow-down.svg')
   background-repeat: no-repeat
@@ -215,7 +214,7 @@ li
   margin-bottom: 40px
 
 .information-box
-  border: 1px dashed #FFB91B
+  border: 1px dashed black
   text-align: center
   padding: 15px
   display: flex
@@ -227,6 +226,64 @@ li
   margin: 0
   font-size: 20px
 
+.interior-page
+  background-color: white
+  color: black
+  padding-top: 150px
+
+  .header-container
+    // display: flex
+    // justify-content: space-between
+
+  .main-header
+    height: 150px
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 2
+    background-image: url('../images/bg-interior-header.png')
+    background-size: cover
+    background-color: #10258E
+    color: white
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15)
+    transition: all 100ms ease-in-out
+
+    &.is-scrolling
+      height: 80px
+      transition: all 300ms ease-in-out
+
+      .main-title
+        opacity: 0
+        transition: opacity 300ms ease-in-out
+
+      .main-logo
+        width: 60px
+
+  .logo-wrapper
+    padding: 0
+    margin-top: 10px
+    position: relative
+    bottom: 5px
+    display: inline-block
+
+  .main-logo
+    width: 100px
+    display: inline-block
+    transition: all 300ms ease-in-out
+
+  .main-menu
+    float: right
+    position: static
+    margin-top: 45px
+
+  .header-arrow-down
+    display: none
+
+.car-notes
+  line-height: 2.5
+  font-size: 17px
+
 // Footer
 
 .main-footer
@@ -235,3 +292,7 @@ li
   display: flex
   align-items: center
   justify-content: center
+
+.footer-text
+  border: 1px dashed white
+  padding: 20px 50px
