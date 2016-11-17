@@ -14,49 +14,53 @@
 
   <img class="vehicle-image-interior wow fadeIn animated" src="{{site.baseurl}}/{{page.cover-image}}" alt="{{page.title}}">
 
-  <div class="container">
+  <section class="information-section">
 
-    <section class="information-section row wow fadeInUp animated">
+    <div class="container">
 
-      <div class="col-xs-3">
-        <div class="information-box">
-          <h2>Price</h2>
-          <p class="information-data">${{ page.price }}</p>
+      <section class="information-section row wow fadeInUp animated">
+
+        <div class="col-xs-3">
+          <div class="information-box">
+            <h2>Price</h2>
+            <p class="information-data">${{ page.price }}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-xs-3">
-        <div class="information-box">
-          <h2>Mileage</h2>
-          <p class="information-data">{{ page.miles }}</p>
+        <div class="col-xs-3">
+          <div class="information-box">
+            <h2>Mileage</h2>
+            <p class="information-data">{{ page.miles }}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-xs-3">
-        <div class="information-box">
-          <h2>Engine</h2>
-          <p class="information-data">{{ page.engine }}</p>
+        <div class="col-xs-3">
+          <div class="information-box">
+            <h2>Engine</h2>
+            <p class="information-data">{{ page.engine }}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-xs-3">
-        <div class="information-box">
-          <h2>Transmission</h2>
-          <p class="information-data">{{ page.transmission}}</p>
+        <div class="col-xs-3">
+          <div class="information-box">
+            <h2>Transmission</h2>
+            <p class="information-data">{{ page.transmission}}</p>
+          </div>
         </div>
-      </div>
 
-    </section>
+      </section>
 
-    <article class="post wow fadeInUp animated">
+      <article class="post wow fadeInUp animated">
 
-      <div class="car-notes">
-        {{ content }}
-      </div>
+        <div class="car-notes">
+          {{ content }}
+        </div>
 
-    </article>
+      </article>
 
-  </div>
+    </div>
+
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
