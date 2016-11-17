@@ -5,7 +5,9 @@ layout: default
 
   <h2 class="car-title">{{ page.title }}</h2>
 
-  <section class="information-section row">
+  <img class="vehicle-image-interior wow fadeInUp animated" src="{{site.baseurl}}/{{page.cover-image}}" alt="{{page.title}}">
+
+  <section class="information-section row wow fadeInUp animated">
 
     <div class="col-xs-3">
       <div class="information-box">
@@ -24,20 +26,20 @@ layout: default
     <div class="col-xs-3">
       <div class="information-box">
         <h2>Engine</h2>
-        <p class="information-data">${{ page.engine }}</p>
+        <p class="information-data">{{ page.engine }}</p>
       </div>
     </div>
 
     <div class="col-xs-3">
       <div class="information-box">
         <h2>Transmission</h2>
-        <p class="information-data">${{ page.transmission}}</p>
+        <p class="information-data">{{ page.transmission}}</p>
       </div>
     </div>
 
   </section>
 
-<article class="post">
+<article class="post wow fadeInUp animated">
 
   <div class="entry">
     {{ content }}
