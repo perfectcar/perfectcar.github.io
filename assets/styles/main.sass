@@ -31,8 +31,8 @@
 
 
 body
-  background-color: #F5F5F5
-  color: black
+  background-color: black
+  color: white
   margin: 0
   font-family: 'Roboto', sans-serif
 
@@ -213,6 +213,11 @@ li
 
 
 // Sections
+
+.sections-wrapper
+  background-color: #F5F5F5
+  color: black
+  padding-top: 40px
 
 .map-container
   width: 100%
@@ -400,6 +405,10 @@ li
 
 // Search Box
 
+.search-box
+  .section-title:first-child
+    margin-top: 0
+
 .search-results-lead
   text-align: center
   margin-top: 20px
@@ -453,6 +462,10 @@ li
       vertical-align: middle
       margin-right: 10px
 
+.directions
+  .section-title:first-child
+    margin-top: 0
+
 // Footer
 
 .main-footer
@@ -469,7 +482,7 @@ li
   // Contact format
 
 .contact-form
-  max-width: 700px
+  max-width: 900px
   margin: 0 auto
 
 input
@@ -478,12 +491,24 @@ input
   width: 100%
   margin-bottom: 40px
   padding-left: 10px
+  border-radius: 5px
+  border: 1px solid #B2B2B2
+
+  &:focus
+    outline: none
 
 textarea
   width: 100%
   resize: none
   height: 150px
   margin-bottom: 40px
+  border-radius: 5px
+  padding-left: 10px
+  padding-top: 10px
+  border: 1px solid #B2B2B2
+
+  &:focus
+    outline: none
 
 .submit-btn
   width: 50%
