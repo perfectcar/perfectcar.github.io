@@ -39,6 +39,7 @@ body
   &.menu-is-open
     overflow: hidden
     position: fixed
+    width: 100%
 
 a, a:focus, a:hover
   color: inherit
@@ -157,11 +158,8 @@ li
 
 
 .mobile-menu
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
+  height: 0
+  width: 100%
   background-color: black
   z-index: 2
   display: flex
@@ -176,6 +174,7 @@ li
     display: flex
     opacity: 1
     pointer-events: auto
+    height: 100vh
 
   .main-menu-link
     margin-bottom: 40px
