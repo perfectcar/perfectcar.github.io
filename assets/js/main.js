@@ -5,6 +5,8 @@ $(function(){
   // Smoth Scrolling
 
   $('a[href*="#"]:not([href="#"])').click(function() {
+    $('.mobile-menu').removeClass('is-open');
+    $('body').removeClass('menu-is-open');
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -34,5 +36,12 @@ $(window).scroll(function() {
 function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
   }
+
+  // Mobile Menu
+
+  $('.mobile-menu-btn').on('click', function(){
+    $('.mobile-menu').toggleClass('is-open');
+    $('body').toggleClass('menu-is-open');
+  });
 
  });
