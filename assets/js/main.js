@@ -40,6 +40,7 @@ function getCurrentScroll() {
   // Mobile Menu
 
   $('.mobile-menu-btn').on('click', function(){
+    $(this).toggleClass('is-open');
     $('.mobile-menu').toggleClass('is-open');
     $('body').toggleClass('menu-is-open');
   });
