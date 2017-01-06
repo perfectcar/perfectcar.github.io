@@ -8,9 +8,9 @@
 
 <body class="interior-page">
 
-  {% include header.html %}
+  {% include mobile-menu.html %}
 
-  <!-- <h2 class="car-title">{{ page.title }}</h2> -->
+  {% include header.html %}
 
   <img class="vehicle-image-interior wow fadeIn animated" src="{{site.baseurl}}/{{page.cover-image}}" alt="{{page.title}}">
 
@@ -20,30 +20,30 @@
 
       <section class="information-section row wow fadeInUp animated">
 
-        <div class="col-xs-3">
+        <div class="col-md-3">
           <div class="information-box">
-            <h2>Price</h2>
+            <h2 class="information-title">Price</h2>
             <p class="information-data">${{ page.price }}</p>
           </div>
         </div>
 
-        <div class="col-xs-3">
+        <div class="col-md-3">
           <div class="information-box">
-            <h2>Mileage</h2>
+            <h2 class="information-title">Mileage</h2>
             <p class="information-data">{{ page.miles }}</p>
           </div>
         </div>
 
-        <div class="col-xs-3">
+        <div class="col-md-3">
           <div class="information-box">
-            <h2>Engine</h2>
+            <h2 class="information-title">Engine</h2>
             <p class="information-data">{{ page.engine }}</p>
           </div>
         </div>
 
-        <div class="col-xs-3">
+        <div class="col-md-3">
           <div class="information-box">
-            <h2>Transmission</h2>
+            <h2 class="information-title">Transmission</h2>
             <p class="information-data">{{ page.transmission}}</p>
           </div>
         </div>
