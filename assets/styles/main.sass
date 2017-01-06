@@ -31,8 +31,8 @@
 
 
 body
-  background-color: black
-  color: white
+  background-color: #F5F5F5
+  color: black
   margin: 0
   font-family: 'Roboto', sans-serif
 
@@ -64,6 +64,7 @@ li
   position: relative
   display: flex
   align-items: center
+  color: white
   @media (max-width: 992px)
     height: 60vh
   @media (max-width: 767px)
@@ -226,7 +227,7 @@ li
   font-style: italic
   font-size: 37px
   font-weight: lighter
-  border-bottom: 4px solid white
+  border-bottom: 4px solid #FA1421
   padding-bottom: 9px
   letter-spacing: 1px
   margin: 40px 0
@@ -236,6 +237,10 @@ li
     text-align: center
     display: block
     margin: 40px auto
+
+  &.is-white
+    color: white
+    border-color: white
 
 .inventory-container
   background-image: linear-gradient(-180deg, #000000 0%, #0E143D 100%)
@@ -395,6 +400,13 @@ li
 
 // Search Box
 
+.search-results-lead
+  text-align: center
+  margin-top: 20px
+  margin-bottom: 20px
+  font-size: 16px
+  font-style: italic
+
 #search-demo-container
   max-width: 40em
   padding: 1em
@@ -402,16 +414,25 @@ li
 
 #search-input
   display: inline-block
-  padding: .5em
+  padding: 35px
   width: 100%
   font-size: 0.8em
   box-sizing: border-box
-  border-color: #10258E
+  border-color: transparent
   outline-color: #10258E
+  border-radius: 50px
+  border: 1px solid #B2B2B2
+  margin-bottom: 0
+  font-size: 18px
+
+  &:focus
+    outline: none
 
 #results-container
+  margin-top: 10px
   background-color: white
   color: black
+  // border: 1px solid #B2B2B2
 
   li
     margin: 20px 10px
@@ -420,6 +441,9 @@ li
     margin-top: 0
     padding-top: 10px
     padding-bottom: 10px
+    &:hover
+      background-color: #10258E
+      color: white
     &::before
       content: ''
       display: inline-block
@@ -441,3 +465,30 @@ li
 .footer-text
   border: 1px dashed white
   padding: 20px 50px
+
+  // Contact format
+
+.contact-form
+  max-width: 700px
+  margin: 0 auto
+
+input
+  display: block
+  height: 50px
+  width: 100%
+  margin-bottom: 40px
+  padding-left: 10px
+
+textarea
+  width: 100%
+  resize: none
+  height: 150px
+  margin-bottom: 40px
+
+.submit-btn
+  width: 50%
+  background-color: #FA1421
+  color: white
+  border: 0
+  display: block
+  margin: 0 auto
