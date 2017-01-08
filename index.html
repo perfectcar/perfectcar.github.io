@@ -4,38 +4,39 @@ layout: default
 
 <div class="inventory-container showHere">
 
-  <section class="container inventory" id="inventory">
+  <section class="inventory home-section" id="inventory">
+    <div class="container">
 
-    <h1 class="section-title is-white">Featured Inventory</h1>
+      <h1 class="section-title is-white">Featured Inventory</h1>
 
-    <div class="featured-inventory-list row">
+      <div class="featured-inventory-list row">
 
-      {% for post in site.posts %}
+        {% for post in site.posts %}
 
-      <div class="col-sm-4 wow fadeInUp animated">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <div class="vehicle-card">
-            <img class="vehicle-image" src="{{site.baseurl}}/{{post.cover-image}}" alt="{{post.title}}">
-            <div class="vehicle-text-wrapper">
-              <h2 class="vehicle-model">{{ post.title | escape }}</h2>
-              <p class="vehicle-miles">{{ post.miles }} Miles</p>
-              <p class="vehicle-price">${{ post.price }}</p>
+        <div class="col-sm-4 wow fadeInUp animated">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <div class="vehicle-card">
+              <img class="vehicle-image" src="{{site.baseurl}}/{{post.cover-image}}" alt="{{post.title}}">
+              <div class="vehicle-text-wrapper">
+                <h2 class="vehicle-model">{{ post.title | escape }}</h2>
+                <p class="vehicle-miles">{{ post.miles }} Miles</p>
+                <p class="vehicle-price">${{ post.price }}</p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+
+        {% endfor %}
+
       </div>
-
-      {% endfor %}
-
     </div>
-
   </section>
 
 </div>
 
 <div class="sections-wrapper">
 
-  <section id ="search" class="container search-box">
+  <section id ="search" class="container home-section search-box ">
     <h1 class="section-title">Search for a Vehicle</h1>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium nisl malesuada lectus feugiat laoreet. Mauris nunc quam, pulvinar ac augue id, fermentum finibus elit. Nulla dictum mattis erat quis ultrices. Morbi rutrum.</p>
@@ -47,7 +48,7 @@ layout: default
     </div>
   </section>
 
-  <section id ="directions" class="directions">
+  <section id ="directions" class="home-section directions">
     <div class="container">
       <h1 class="section-title">Directions</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium nisl malesuada lectus feugiat laoreet.</p>
@@ -56,32 +57,34 @@ layout: default
     </div>
   </section>
 
-  <section id ="contact" class="container contact">
-    <h1 class="section-title">Contact Us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium nisl malesuada lectus feugiat laoreet.</p>
+  <section id ="contact" class="home-section contact">
+    <div class="container">
+      <h1 class="section-title">Contact Us</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium nisl malesuada lectus feugiat laoreet.</p>
 
-    <form action="" class="contact-form">
-      <div class="row">
-        <div class="col-md-6">
-          <label for="name">Name</label>
-          <input type="text" name="name" placeholder="Name">
+      <form action="" class="home-section contact-form">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Name">
+          </div>
+          <div class="col-md-6">
+            <label for="email">E-mail</label>
+            <input type="text" type="email" name="_replyto" placeholder="Email">
+          </div>
+          <div class="col-md-12">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" placeholder="Subject">
+            <label for="message">Your message</label>
+            <textarea name="message" placeholder="Message"></textarea>
+            <input class="submit-btn" type="submit" value="Send">
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="email">E-mail</label>
-          <input type="text" type="email" name="_replyto" placeholder="Email">
-        </div>
-        <div class="col-md-12">
-          <label for="subject">Subject</label>
-          <input type="text" name="subject" placeholder="Subject">
-          <label for="message">Your message</label>
-          <textarea name="message" placeholder="Message"></textarea>
-          <input class="submit-btn" type="submit" value="Send">
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </section>
 
-  <section id ="subscribe" class="subscribe">
+  <section id ="subscribe" class="home-section subscribe">
     <div class="container">
 
       <h1 class="section-title">Subscribe</h1>
@@ -97,7 +100,7 @@ layout: default
           </div>
         </div>
       </form>
-      
+
     </div>
   </section>
 
