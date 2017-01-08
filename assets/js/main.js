@@ -45,4 +45,12 @@ function getCurrentScroll() {
     $('body').toggleClass('menu-is-open');
   });
 
+  // Map
+
+  $('.map-container').click(function(e) {
+      $(this).find('iframe').css('pointer-events', 'all');
+  }).mouseleave(function(e) {
+      $(this).find('iframe').css('pointer-events', 'none');
+  });
+
  });
