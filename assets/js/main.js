@@ -46,11 +46,12 @@ function getCurrentScroll() {
   });
 
   // Map
+  $('.map-container').click(function () {
+      $('.map-container iframe').css("pointer-events", "auto");
+  });
 
-  $('.map-container').click(function(e) {
-      $(this).find('iframe').css('pointer-events', 'all');
-  }).mouseleave(function(e) {
-      $(this).find('iframe').css('pointer-events', 'none');
+  $( ".map-container" ).mouseleave(function() {
+    $('.map-container iframe').css("pointer-events", "none");
   });
 
  });
