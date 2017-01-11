@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: interior
 ---
 
 {% include header.html %}
@@ -13,7 +13,7 @@ layout: default
 
       <div class="featured-inventory-list row">
 
-        {% for post in site.categories.front %}
+        {% for post in site.posts %}
 
         <div class="col-sm-4 wow fadeInUp animated">
           <a href="{{ post.url | prepend: site.baseurl }}">
