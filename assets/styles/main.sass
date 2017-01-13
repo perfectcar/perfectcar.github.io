@@ -137,6 +137,8 @@ li
   display: inline-block
   overflow: hidden
   text-transform: uppercase
+  &:active, &:focus
+    color: white
   @media (max-width: 767px)
     display: block
 
@@ -144,6 +146,8 @@ li
   position: relative
   display: inline-block
   transition: transform 0.3s
+  &:active, &:focus
+    color: white
 
 .main-menu-link a span::before
   color: #FFB91B
@@ -581,3 +585,27 @@ textarea
     top: 24px
     width: 30px
     height: 20px
+
+.header-phone
+  font-size: 20px
+  font-style: italic
+  position: absolute
+  top: 60px
+  left: 100px
+  @media (max-width: 992px)
+    left: 40px
+    font-size: 18px
+  @media (max-width: 767px)
+    display: none
+
+  &::before
+    content: ''
+    display: inline-block
+    background-image: url('../images/phone-icon.png')
+    background-size: contain
+    background-repeat: no-repeat
+    width: 60px
+    height: 38px
+    vertical-align: middle
+    position: relative
+    bottom: 2px
