@@ -54,4 +54,22 @@ function getCurrentScroll() {
     $('.map-container iframe').css("pointer-events", "none");
   });
 
+  // Sticky Header
+
+    // Set options
+    var options = {
+       offset: '.showHere',
+       offsetSide: 'top',
+       classes: {
+           clone:   'main-header--clone',
+           stick:   'main-header--stick',
+           unstick: 'main-header--unstick'
+       }
+    };
+
+    // Initialise with options
+    var banner = new Headhesive('.main-header', options);
+    // Headhesive destroy
+    // banner.destroy();
+
  });

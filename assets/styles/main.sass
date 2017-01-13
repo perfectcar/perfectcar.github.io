@@ -70,6 +70,62 @@ li
   @media (max-width: 767px)
     height: 255px
 
+.main-header--clone
+  position: fixed
+  z-index: 1
+  bottom: 0
+  left: 0
+  height: 80px
+  width: 100%
+  background: #176fc0
+  color: white
+  transform: translateY(-100%)
+  transition: all 300ms ease-in-out
+  display: none
+  background-image: url('../images/bg-interior-header.png')
+  background-size: cover
+  background-color: #10258E
+  color: white
+  border-top: 2px solid black
+
+  .main-title
+    opacity: 0
+    transition: opacity 300ms ease-in-out
+
+  .main-logo
+    width: 60px
+
+  .header-phone
+    display: none
+
+  .header-arrow-down
+    display: none
+
+  .logo-wrapper
+    padding: 0
+    margin-top: 10px
+    position: relative
+    bottom: 5px
+    display: inline-block
+
+  .main-title
+    display: none
+
+  .main-menu
+    float: right
+    position: static
+    padding-top: 23px
+    @media (max-width: 992px)
+      margin-top: 30px
+      font-size: 18px
+
+.main-header--stick
+  display: block
+  transform: translateY(0%)
+
+  @media (max-width: 767px)
+    display: none
+
 .header-arrow-down
   display: block
   width: 65px
@@ -353,7 +409,7 @@ li
 
   .header-phone
     display: none
-    
+
   @media (max-width: 767px)
     padding-top: 0
 
@@ -499,6 +555,7 @@ li
   align-items: center
   justify-content: center
   color: white
+  padding-bottom: 80px
 
 .footer-text
   border: 1px dashed white
