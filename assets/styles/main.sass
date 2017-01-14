@@ -648,11 +648,13 @@ textarea
     height: 20px
 
 .header-phone-mobile
-  display: block
+  display: none
   font-family: 'League Gothic'
   margin-top: 10px
   font-style: italic
   letter-spacing: 5px
+  @media (max-width: 767px)
+    display: block
   &::before
     content: ''
     display: inline-block
