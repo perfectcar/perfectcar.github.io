@@ -647,6 +647,24 @@ textarea
     width: 30px
     height: 20px
 
+.header-phone-mobile
+  display: block
+  font-family: 'League Gothic'
+  margin-top: 10px
+  font-style: italic
+  letter-spacing: 5px
+  &::before
+    content: ''
+    display: inline-block
+    background-image: url('../images/phone-icon.png')
+    background-size: contain
+    background-repeat: no-repeat
+    width: 30px
+    height: 20px
+    vertical-align: middle
+    position: relative
+    bottom: 2px
+
 .header-phone
   font-size: 30px
   font-style: italic
@@ -658,6 +676,8 @@ textarea
   @media (max-width: 992px)
     left: 40px
     font-size: 18px
+  @media (max-width: 767px)
+    display: none
 
   &::before
     content: ''
