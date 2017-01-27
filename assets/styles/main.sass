@@ -337,6 +337,9 @@ li
 .vehicle-image
   width: 100%
   height: auto
+  max-height: 185px
+  @media (max-width: 992px)
+    max-height: 150px
 
 .vehicle-text-wrapper
   padding: 0 10px
@@ -481,6 +484,7 @@ li
     left: inherit
     @media (max-width: 992px)
       font-size: 20px
+      margin-top: 0
 
   .header-arrow-down
     display: none
