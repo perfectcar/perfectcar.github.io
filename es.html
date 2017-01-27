@@ -9,7 +9,7 @@ layout: default
   <section class="inventory home-section" id="inventario">
     <div class="container">
 
-      <h1 class="section-title is-white">Inventario Destacado</h1>
+      <h1 class="section-title is-white showHere">Inventario Destacado</h1>
 
       <div class="featured-inventory-list row">
 
@@ -72,15 +72,21 @@ layout: default
         <div class="row">
           <div class="col-md-6">
             <label for="name">Nombre</label>
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="Nombre">
           </div>
           <div class="col-md-6">
             <label for="email">E-mail</label>
             <input type="text" type="email" name="_replyto" placeholder="Email">
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <label for="subject">Asunto</label>
             <input type="text" name="subject" placeholder="Asunto">
+          </div>
+          <div class="col-md-6">
+            <label for="telephone">Teléfono</label>
+            <input type="number" name="telephone" placeholder="Teléfono">
+          </div>
+          <div class="col-md-12">
             <label for="message">Tu mensaje</label>
             <textarea name="message" placeholder="Message"></textarea>
             <input class="submit-btn" type="submit" value="Enviar">
