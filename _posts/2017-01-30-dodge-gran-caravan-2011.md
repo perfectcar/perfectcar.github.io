@@ -6,7 +6,8 @@ price: '5199.00'
 miles: 125000
 engine: '3.7'
 transmission: Automatic
-category: front
+category:
+- front
 layout: post
 ---
 ![]({{ site.baseurl }}/assets/images/car-pictures/IMG_9717%20-%20Copy.JPG)![]({{ site.baseurl }}/assets/images/car-pictures/IMG_9740.JPG)
